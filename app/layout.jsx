@@ -1,4 +1,5 @@
 // Main Entry point of the application
+import Navbar from '@components/Navbar';
 import '@styles/globals.css';
 
 export const metadata = {
@@ -14,7 +15,11 @@ export default function RootLayout({ children }) {
         <div className="main">
           <div className="gradient" />
         </div>
-        <main className="app">{children}</main>
+
+        <main className="app">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
