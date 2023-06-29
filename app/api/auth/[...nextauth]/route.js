@@ -9,12 +9,11 @@ import User from '@models/user';
 const handler = NextAuth({
   // Configure one or more authentication providers
   providers: [
-    GithubProvider({
-      clientId: '',
-      // process.env.GITHUB_ID
-      clientSecret: '',
-      // process.env.GITHUB_SECRET
-    }),
+    // GithubProvider({
+    //   clientId: '',
+
+    //   clientSecret: '',
+    // }),
 
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
