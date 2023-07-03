@@ -8,7 +8,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
       {data?.map((prompt) => (
         <PromptCard
           key={prompt._id}
-          prompt={prompt}
+          post={prompt}
           handleTagClick={handleTagClick}
         />
       ))}
@@ -35,7 +35,7 @@ const Feed = () => {
   }, []);
 
   return (
-    <section className="feed">
+    <section className="feed relative">
       <form className="relative w-full flex-center">
         <input
           type="text"
