@@ -24,11 +24,11 @@ const Feed = () => {
     setSearchText(e.target.value);
   };
   const fetchPosts = async () => {
-    const response = await fetch('/api/create-prompt');
+    const response = await fetch('/api/prompt');
     const data = await response.json();
 
     setPosts(data);
-    console.log(data);
+    // console.log(data);
   };
   useEffect(() => {
     fetchPosts();
