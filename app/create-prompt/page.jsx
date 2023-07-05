@@ -18,7 +18,7 @@ const CreatePrompt = () => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const res = await fetch('/api/create-prompt/new', {
+      const res = await fetch('/api/prompt/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/ json',
@@ -32,7 +32,7 @@ const CreatePrompt = () => {
       setSubmitting(false);
       const json = await res.json();
       if (!res.ok) throw Error(json.message);
-      alert('Created Successfully!');
+      // alert('Created Successfully!');
       router.push('/');
     } catch (e) {
       // throw Error(e.message);
